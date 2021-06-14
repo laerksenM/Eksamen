@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane fx:controller="org.example.Patient" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView layoutX="-4.0" prefHeight="200.0" prefWidth="600.0">
+              <columns>
+                <TableColumn prefWidth="125.0" text="Puls forklaring" />
+                <TableColumn prefWidth="170.0" text="SpO2 forklaring" />
+                  <TableColumn minWidth="0.0" prefWidth="159.0" text="Temperatur forklaring" />
+                  <TableColumn prefWidth="145.0" text="Ekg forklaring" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="133.0" text="Kommentare til puls under" />
+          <TableColumn minWidth="1.0" prefWidth="159.0" text=" Kommententarer til SpO2" />
+            <TableColumn prefWidth="143.0" text="Kommententarer til temp" />
+            <TableColumn prefWidth="163.0" text="Kommententarer til ekg" />
+        </columns>
+      </TableView>
+   </bottom>
+</BorderPane>

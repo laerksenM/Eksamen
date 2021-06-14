@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"fx:controller="org.example.Patient">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Patient">
    <top>
       <AnchorPane prefHeight="100.0" prefWidth="520.0" BorderPane.alignment="CENTER">
          <children>
@@ -20,8 +20,8 @@
             </Label>
             <Label layoutX="14.0" layoutY="33.0" text="CPR nr.: 123456-7890" />
             <Button fx:id="logUdPatient" layoutX="442.0" layoutY="20.0" mnemonicParsing="false" text="Log ud" textFill="#1a1919" onAction="#close"/>
-            <Label layoutX="14.0" layoutY="69.0" text="Herunder ses dine data, for uddybning og betydning tryk her -&gt;" />
-            <Button fx:id="dataForklaring" layoutX="364.0" layoutY="64.0" mnemonicParsing="false" text="Data forklaring" />
+            <Label layoutX="14.0" layoutY="69.0" text="Herunder ses dine data, for uddybning og betydning tryk her;" />
+            <Button fx:id="dataForklaring" layoutX="364.0" layoutY="64.0" mnemonicParsing="false" text="Data forklaring" onAction="#Info" />
          </children>
       </AnchorPane>
    </top>

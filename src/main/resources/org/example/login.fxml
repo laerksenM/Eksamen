@@ -28,12 +28,12 @@
                   <Image url="@Billedertiljavafx/Unknown.png" />
                </image>
             </ImageView>
-            <Label layoutX="20.0" layoutY="172.0" text="Brugernavn:" />
+            <Label layoutX="20.0" layoutY="172.0" text="Brugernavn:"/>
             <TextField fx:id="BrugernavnTextField" layoutX="95.0" layoutY="167.0" />
             <Label layoutX="20.0" layoutY="224.0" text="Kodeord:" />
             <TextField fx:id="KodeordPass" layoutX="95.0" layoutY="219.0" />
             <Button fx:id="loginButton" layoutX="100.0" layoutY="285.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Login" textFill="#424141" onAction="#loginButtonOnAction"/>
-            <Button fx:id="fortrydButton"  layoutX="125.0" layoutY="329.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" text="Fortryd" />
+            <Button fx:id="fortrydButton"  layoutX="125.0" layoutY="329.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="100.0" text="Fortryd" onAction="#fortrydButtonOnAction" />
          </children>
       </AnchorPane>
    </right>

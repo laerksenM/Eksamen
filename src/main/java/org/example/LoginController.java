@@ -1,4 +1,5 @@
 package org.example;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -10,63 +11,39 @@ import java.io.IOException;
 public class LoginController {
 
     @FXML
-   private Button loginButton;
-
-    public void fortrydButtonOnAction(ActionEvent event) {
-        Stage stage =(Stage) loginButton.getScene().getWindow();
-        stage.close();
-    }
-            TextField login;
-    public void login(ActionEvent actionEvent) throws IOException {
-        try {
-
-            if (login.getText().contains("gmail")) {
-                Main.setRoot("Patient");
-
-                //JavaFxApp.setRoot("personale");
-                //find ud af: java check if string is integer
-            }
-            if (login.getText().contains("Personale")) {
-
-                Main.openstage(); //lav en ny scene/side
-                //find ud af: java check if string is integer
-            }
-        } finally {
-
-        }
-    }
-
-    public void lavBrugerForms(){
-            //try {
-                /*Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-                primaryStage.setTitle("Hello World");
-                primaryStage.setScene(new Scene(root, 300, 275));
-                primaryStage.show();*/
-
-    }
+    Button loginButton;
 
     @FXML
-    public void loginButtonOnAction(ActionEvent actionEvent) {
-        try {
-            //if (login.getText().contains("gmail")) {
-                Main.setRoot("Personale.fxml");//}
-                //Main.setRoot("Patient.fxml");
+    TextField BrugernavnTextField;
+    Main main = new Main();
 
-                //else  {Main.setRoot("Patient");}
-            Main.openstage();
+    public void fortrydButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        stage.close();
+        main.closestage();// her får vi siden logget ved at man klikker på fortryd
+
+    }
+
+    public void loginButtonOnAction(ActionEvent actionEvent) throws IOException {
+
+
+        try {
+            System.out.println(BrugernavnTextField.getText());
+            if (BrugernavnTextField.getText().contains("gmail")) ;
+            { //her skal brugernavnet indeholde ordet "gmail" for at man kan logget ind son sundhedsprsonale
+                Main.setRoot("PersonaleN.fxml");
+                Main.openstage();
+            } else if (BrugernavnTextField.getText().contains("")) { // her der kan man taste hvad man vil for at komme ind på patient siden, vores intension er dog at patient skal bruge sit CPR for at logge ind
+                Main.setRoot("Patient.fxml");
+                Main.openstage();
+            } else {
+                System.out.println("Forkert login, prøv igen"); // hvis der ikke bliver tastet et godkendt kodeord vil den i terminalen skrive deet forkert, samt hvd der er indtastes
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    /*@FXML
-    public void loginButtonOnAction(ActionEvent actionEvent) {
-        try {
-            Main.setRoot("Personale");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 }
+
 
